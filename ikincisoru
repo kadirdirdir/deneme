@@ -26,7 +26,29 @@ print("Sesli harfler: ", sesli)
 print("Sessiz harfler: ", sessiz)
 
 
-print("F-) Kucun unlu uygunlugu")
+print("F-) Kucuk unlu uygunlugu")
+
+kalinharf="a, ı, o, u."
+inceharf= "e, i, ö, ü"
+harf=""
+
+for i in girilen:
+    harf+=i
+    if i in kalinharf:
+
+        print("Küçük ünlü uyumu yoktur... ")
+        break
+    else:
+
+     if i in inceharf:
+              print("Küçük ünlü uyumu vardır... ")
+
+
+
+
+
+
+
 
 
 
