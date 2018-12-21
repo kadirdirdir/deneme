@@ -1,0 +1,19 @@
+sayilar = []
+
+for k in range (5):
+    girilen = input("Bir sayı giriniz  =  ")
+    sayilar.append(girilen)
+
+sayilar.sort(reverse=True)
+print(sayilar)
+
+dosya=open(r"C:\kadir\221120171015_sonuc.txt", "w")
+
+
+for j in range (5):
+
+    dosya.write( "> " + sayilar[j] + " ")
+
+
+
+
