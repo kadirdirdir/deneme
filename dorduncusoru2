@@ -1,0 +1,39 @@
+import math
+
+foundnumber = False
+
+digits = 5
+
+def makearray(number):
+    array = []
+    for iteration in range(int(math.log10(number)+1)):
+
+        array.append(number % 10)
+        number //= 10
+
+    return array
+
+def checkarray(array1, array2):
+
+        for digit in array1:
+            if digit not in array2:
+                return False
+        return True
+
+while foundnumber == False:
+    for numbers1 in range(10 ** digits, (10 ** (digits + 1))//6):
+
+
+        a=makearray(numbers1)
+        b=makearray(numbers1*2)
+        c=makearray(numbers1*3)
+        d=makearray(numbers1*4)
+        e=makearray(numbers1*5)
+        f=makearray(numbers1*6)
+
+
+        if checkarray(a,b) == checkarray(a,c) == checkarray(a,d) == checkarray(a,f) == checkarray(a,f) == True:
+            print(numbers1)
+            foundnumber = True
+
+digits += 1
