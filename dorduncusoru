@@ -1,0 +1,39 @@
+import math
+
+numara = False
+
+toplam = 5
+
+def makearray(number):
+    array = []
+    for iteration in range(int(math.log10(number)+1)):
+
+        array.append(number % 10)
+        number //= 10
+
+    return array
+
+def checkarray(array1, array2):
+
+        for digit in array1:
+            if digit not in array2:
+                return False
+        return True
+
+while numara == False:
+    for numara1 in range(10 * toplam, (10 * (toplam + 1))//6):
+
+
+        a=makearray(numara1)
+        b=makearray(numara1*2)
+        c=makearray(numara1*3)
+        d=makearray(numara1*4)
+        e=makearray(numara1*5)
+        f=makearray(numara1*6)
+
+
+        if checkarray(a,b) == checkarray(a,c) == checkarray(a,d) == checkarray(a,f) == checkarray(a,f) == True:
+            print(numara1)
+            numara = True
+
+    toplam += 1
