@@ -1,0 +1,6 @@
+Toplama = 0
+for i in range (1,1001):
+    Toplama=Toplama+i**i
+
+x = Toplama%10000000000
+print(x)
