@@ -1,0 +1,26 @@
+a = b = c = 1
+def fonksiyon1(x):
+    return x*(x+1)/2
+
+def fonksiyon2(x):
+    return x*((3*x)-1)/2
+
+def fonksiyon3(x):
+    return x*((2*x)-1)
+
+fonk_a = fonksiyon1(a)
+fonk_b = fonksiyon2(b)
+fonk_c = fonksiyon3(c)
+
+while True :
+  if fonk_a == fonk_b and fonk_b == fonk_c:
+    print("A:{}, B:{}, C:{}, Eşitlendikleri yer : {}".format(a,b,c,fonk_a))
+  if fonk_a <= fonk_b and fonk_a <= fonk_c:
+    a += 1
+    fonk_a = fonksiyon1(a)
+  elif fonk_b <= fonk_a and fonk_b <= fonk_c:
+    b += 1
+    fonk_b = fonksiyon2(b)
+  elif fonk_c <= fonk_a and fonk_c <= fonk_b:
+    c += 1
+    fonk_c = fonksiyon3(c)
